@@ -13,6 +13,7 @@ abstract class Routes {
   static const WINTER_LIST = _Paths.WINTER_LIST;
   static const INDORE_LIST = _Paths.INDORE_LIST;
   static const ALL_TIME = _Paths.ALL_TIME;
+  static const BUYPAGE = _Paths.BUYPAGE;
 }
 
 abstract class _Paths {
@@ -25,4 +26,5 @@ abstract class _Paths {
   static const WINTER_LIST = '/winter-list';
   static const INDORE_LIST = '/indore-list';
   static const ALL_TIME = '/all-time';
+  static const BUYPAGE = '/buypage';
 }

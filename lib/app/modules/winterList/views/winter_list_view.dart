@@ -118,9 +118,14 @@ class WinterListView extends GetView<WinterListController> {
                     right: 10,
                     child: Stack(
                       children: [
-                        Image.asset(
-                          'assets/buyButton.png',
-                          width: 100,
+                        GestureDetector(
+                          onTap: () => Get.toNamed("/buypage",
+                              arguments: controller.summerPlantsList[index]
+                                  ['image']),
+                          child: Image.asset(
+                            'assets/buyButton.png',
+                            width: 100,
+                          ),
                         ),
                         Positioned(
                           left: 45,

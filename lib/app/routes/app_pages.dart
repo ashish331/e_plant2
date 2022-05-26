@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/allTime/bindings/all_time_binding.dart';
 import '../modules/allTime/views/all_time_view.dart';
+import '../modules/buypage/bindings/buypage_binding.dart';
+import '../modules/buypage/views/buypage_view.dart';
 import '../modules/category/bindings/category_binding.dart';
 import '../modules/category/views/category_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -64,6 +66,11 @@ class AppPages {
       name: _Paths.ALL_TIME,
       page: () => AllTimeView(),
       binding: AllTimeBinding(),
+    ),
+    GetPage(
+      name: _Paths.BUYPAGE,
+      page: () => BuypageView(),
+      binding: BuypageBinding(),
     ),
   ];
 }

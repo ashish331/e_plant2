@@ -98,7 +98,7 @@ class AllTimeView extends GetView<AllTimeController> {
                                 height: 20,
                               ),
                               Text(
-                                'Qt: 20',
+                                'Qt: Available',
                                 style: TextStyle(
                                   fontFamily: 'Adobe Clean',
                                   fontSize: 15,
@@ -118,9 +118,12 @@ class AllTimeView extends GetView<AllTimeController> {
                     right: 10,
                     child: Stack(
                       children: [
-                        Image.asset(
-                          'assets/buyButton.png',
-                          width: 100,
+                        GestureDetector(
+                          onTap: () => Get.toNamed("/buypage", arguments:controller.summerPlantsList[index]['image']),
+                          child: Image.asset(
+                            'assets/buyButton.png',
+                            width: 100,
+                          ),
                         ),
                         Positioned(
                           left: 45,
