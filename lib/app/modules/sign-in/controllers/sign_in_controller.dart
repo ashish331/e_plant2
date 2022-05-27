@@ -18,13 +18,12 @@ class SignInController extends GetxController {
   var verificationId = "";
   void otpcode() async {
     var mobNo = mobNoControler.text;
-    ConfirmationResult confirmationResult =
-        await auth.signInWithPhoneNumber('+91 $mobNo',
-            );
-    print(confirmationResult.verificationId);
-    Get.toNamed('/otp', arguments: confirmationResult);
-  }
+    Get.toNamed('/otp', arguments: mobNo);
 
+   
+   // print(confirmationResult.verificationId);
+    
+  }
 
   Future<UserCredential> signInWithGoogle() async {
     // Trigger the authentication flow

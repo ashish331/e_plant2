@@ -21,6 +21,7 @@ class AllTimeView extends GetView<AllTimeController> {
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Container(
+                      height: 150,
                       decoration: BoxDecoration(
                         color: const Color(0xffffffff),
                         borderRadius: BorderRadius.circular(20.0),
@@ -53,7 +54,7 @@ class AllTimeView extends GetView<AllTimeController> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20),
                                 child: Image(
-                                    height: 160,
+                                    height: 120,
                                     image: NetworkImage(
                                       controller.summerPlantsList[index]
                                           ['image'],
@@ -119,14 +120,16 @@ class AllTimeView extends GetView<AllTimeController> {
                     child: Stack(
                       children: [
                         GestureDetector(
-                          onTap: () => Get.toNamed("/buypage", arguments:controller.summerPlantsList[index]['image']),
+                          onTap: () => Get.toNamed("/buypage",
+                              arguments: controller.summerPlantsList[index]
+                                  ['image']),
                           child: Image.asset(
                             'assets/buyButton.png',
-                            width: 100,
+                            width: 70,
                           ),
                         ),
                         Positioned(
-                          left: 45,
+                          left: 30,
                           top: 12,
                           child: Text(
                             'Buy',

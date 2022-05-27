@@ -21,6 +21,7 @@ class IndoreListView extends GetView<IndoreListController> {
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Container(
+                      height: 170,
                       decoration: BoxDecoration(
                         color: const Color(0xffffffff),
                         borderRadius: BorderRadius.circular(20.0),
@@ -53,7 +54,7 @@ class IndoreListView extends GetView<IndoreListController> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20),
                                 child: Image(
-                                    height: 160,
+                                    height: 120,
                                     image: NetworkImage(
                                       controller.summerPlantsList[index]
                                           ['image'],
@@ -78,7 +79,7 @@ class IndoreListView extends GetView<IndoreListController> {
                                 ),
                                 child: Text(
                                   controller.summerPlantsList[index]["name"],
-                                  style: TextStyle(fontSize: 16),
+                                  style: TextStyle(fontSize: 14),
                                 ),
                               ),
                               SizedBox(
@@ -118,8 +119,10 @@ class IndoreListView extends GetView<IndoreListController> {
                     right: 10,
                     child: Stack(
                       children: [
-                       GestureDetector(
-                          onTap: () => Get.toNamed("/buypage", arguments:controller.summerPlantsList[index]['image']),
+                        GestureDetector(
+                          onTap: () => Get.toNamed("/buypage",
+                              arguments: controller.summerPlantsList[index]
+                                  ['image']),
                           child: Image.asset(
                             'assets/buyButton.png',
                             width: 100,

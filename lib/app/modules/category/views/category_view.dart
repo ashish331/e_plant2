@@ -32,7 +32,7 @@ class CategoryView extends GetView<CategoryController> {
             'Choose Wisely ☘️'.toUpperCase(),
             style: TextStyle(
               fontFamily: 'Helvetica Neue',
-              fontSize: 48,
+              fontSize: 30,
               color: const Color(0xffc4d3d1),
               fontWeight: FontWeight.w700,
             ),

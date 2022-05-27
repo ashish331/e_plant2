@@ -54,13 +54,14 @@ class SummerListView extends GetView<SummerListController> {
                                     image: NetworkImage(
                                         controller.summerPlantsList[index]
                                             ['image'],
-                                        scale: 7)),
+                                        scale: 9)),
                               ),
                             ),
                           ),
                           Column(
                             children: [
                               Container(
+                                alignment: Alignment.centerLeft,
                                 padding: EdgeInsets.all(10),
                                 decoration: BoxDecoration(
                                   color: const Color(0xffffffff),
@@ -75,7 +76,7 @@ class SummerListView extends GetView<SummerListController> {
                                 ),
                                 child: Text(
                                   controller.summerPlantsList[index]["name"],
-                                  style: TextStyle(fontSize: 16),
+                                  style: TextStyle(fontSize: 14),
                                 ),
                               ),
                               SizedBox(
@@ -85,7 +86,7 @@ class SummerListView extends GetView<SummerListController> {
                                 'Price: \₹ 34',
                                 style: TextStyle(
                                   fontFamily: 'Adobe Clean',
-                                  fontSize: 15,
+                                  fontSize: 12,
                                   color: const Color(0xff707070),
                                   fontWeight: FontWeight.w700,
                                 ),
@@ -115,15 +116,17 @@ class SummerListView extends GetView<SummerListController> {
                     right: 10,
                     child: Stack(
                       children: [
-                      GestureDetector(
-                          onTap: () => Get.toNamed("/buypage", arguments:controller.summerPlantsList[index]['image']),
+                        GestureDetector(
+                          onTap: () => Get.toNamed("/buypage",
+                              arguments: controller.summerPlantsList[index]
+                                  ['image']),
                           child: Image.asset(
                             'assets/buyButton.png',
-                            width: 100,
+                            width: 70,
                           ),
                         ),
                         Positioned(
-                          left: 45,
+                          left: 30,
                           top: 12,
                           child: Text(
                             'Buy',

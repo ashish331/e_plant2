@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "710812099389-bj0srgiftcv4ao3fcgvm0sc2ecjpndt9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eplant.e_plant",
+            "certificate_hash": "d9328852a4d4a3f08d3229e12816cbde6656fac1"
+          }
+        },
+        {
           "client_id": "710812099389-a4kn1j0kcat4p5d3ermjor6rqu9jqn6c.apps.googleusercontent.com",
           "client_type": 3
         }

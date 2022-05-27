@@ -21,6 +21,7 @@ class WinterListView extends GetView<WinterListController> {
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Container(
+                      height: 150,
                       decoration: BoxDecoration(
                         color: const Color(0xffffffff),
                         borderRadius: BorderRadius.circular(20.0),
@@ -53,7 +54,7 @@ class WinterListView extends GetView<WinterListController> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20),
                                 child: Image(
-                                    height: 160,
+                                    height: 100,
                                     image: NetworkImage(
                                       controller.summerPlantsList[index]
                                           ['image'],
@@ -124,11 +125,11 @@ class WinterListView extends GetView<WinterListController> {
                                   ['image']),
                           child: Image.asset(
                             'assets/buyButton.png',
-                            width: 100,
+                            width: 70,
                           ),
                         ),
                         Positioned(
-                          left: 45,
+                          left: 30,
                           top: 12,
                           child: Text(
                             'Buy',
